@@ -58,7 +58,7 @@ public class MergeSort {
 		int i = low;
 		int j = mid + 1;
 		int k = low;
-		while (i < mid && j < high) {
+		while (i <= mid && j <= high) {
 			if (a[i] < a[j]) {
 				c[k] = a[i];
 				i++;
@@ -70,18 +70,18 @@ public class MergeSort {
 				k++;
 			}
 		}
-		while (i < mid) {
+		while (i <= mid) {
 			c[k] = a[i];
 			i++;
 			k++;
 		}
-		while (j > high) {
-			c[k] = a[i];
-			i++;
+		while (j <= high) {
+			c[k] = a[j];
+			j++;
 			k++;
 		}
 
-		for (i = low; i < high; i++)
+		for (i = low; i <= high; i++)
 			a[i] = c[i];
 	}
 
