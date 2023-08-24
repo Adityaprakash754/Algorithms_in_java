@@ -5,7 +5,7 @@ public class Dijkstra {
 	private int n,src;
 	private int [] dist;
 	private int [][] adj;
-    private boolean [] visited;
+    	private boolean [] visited;
 	Scanner sc = new Scanner(System.in);
 	public void input() {
 		System.out.println("Enter the no of vertices: ");
@@ -13,7 +13,7 @@ public class Dijkstra {
 		
 		adj = new int [n][n];
 		dist = new int[n];
-        visited = new boolean[n];
+        	visited = new boolean[n];
 		
 		System.out.println("Enter adj matrix: ");
 		for(int i = 0; i < n; i++) {
@@ -25,16 +25,16 @@ public class Dijkstra {
 		System.out.println("Enter the source vertex: ");
 		src = sc.nextInt();
 
-        dijkstra();
+        	dijkstra();
 	}
 
     public void dijkstra(){
         int minDist, unvis = -1;
         for(int i = 0; i < n; i++) {
-			dist [i] = adj[src - 1][i];
-
-            visited[i] = false;
-		}
+		dist [i] = adj[src - 1][i];
+		
+		visited[i] = false;
+	}
 
         visited[src - 1] = true;
 
