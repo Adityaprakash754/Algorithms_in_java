@@ -43,6 +43,7 @@ public class Hamiltonian {
             } 
         }
     }
+    
     public static void nextValue(int k) {
         while (true) {
             soln[k] = (soln[k] + 1) % (n + 1);
@@ -65,6 +66,7 @@ public class Hamiltonian {
             }   
         } 
     }
+    
     public static void printArray() { 
         count += 1;
         for (int i = 1; i <= n; i++) { 
